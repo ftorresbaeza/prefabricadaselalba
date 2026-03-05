@@ -7,12 +7,12 @@
   <meta name="description" content="Cotiza tu casa prefabricada en 4 pasos: elige el tamaño, estilo, modalidad y región. Obtén un precio estimado al instante y agenda una asesoría gratuita.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://prefabricadaselalba.cl/cotizador.html">
-  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.webp">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://prefabricadaselalba.cl/cotizador.html">
   <meta property="og:title" content="Cotizador Online | Casas Prefabricadas El Alba">
   <meta property="og:description" content="Obtén un precio estimado de tu casa prefabricada en 4 pasos. Desde $7.740.000. Entrega a todo Chile.">
-  <meta property="og:image" content="https://prefabricadaselalba.cl/assets/hero.jpg">
+  <meta property="og:image" content="https://prefabricadaselalba.cl/assets/hero.webp">
   <meta property="og:locale" content="es_CL">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -351,7 +351,7 @@
           <div class="check"><i class="fas fa-check"></i></div>
           <span class="opt-icon">⚡</span>
           <div class="opt-title">Kit con Instalaciones</div>
-          <div class="opt-sub">Incluye instalación eléctrica, sanitaria y agua potable. Nosotros instalamos las redes.</div>
+          <div class="opt-sub">Incluye fundación (radier), armado del kit, revestimientos e instalaciones de luz y agua. Sin terminaciones (pintura, cerámicos ni artefactos).</div>
           <div class="opt-price">~15–20% sobre el kit</div>
         </div>
         <div class="opt-card" data-val="llave" onclick="select(this,'modal')">
@@ -609,7 +609,8 @@ function showResult(){
 
   document.getElementById('rTitle').textContent = `${styleNombres[sel.style]||'Tu casa'} · ${sizeNombres[sel.size]}`;
   document.getElementById('rPrice').textContent  = matches.length===1 ? fmtP(prices[0]) : `${fmtP(minP)} – ${fmtP(maxP)}`;
-  document.getElementById('rPriceSub').textContent = `Modalidad: ${modalNombres[sel.modal]} · Sin flete`;
+  const fleteSub = sel.region === 'rm' ? 'Flete incluido en cotización' : 'Flete a cotizar por separado';
+  document.getElementById('rPriceSub').textContent = `Modalidad: ${modalNombres[sel.modal]} · ${fleteSub}`;
 
   // Grid de resumen
   document.getElementById('rGrid').innerHTML = `

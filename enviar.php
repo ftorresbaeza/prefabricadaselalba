@@ -102,7 +102,7 @@ $body_cliente = <<<HTML
       <!-- HEADER con gradiente -->
       <tr>
         <td style="background:linear-gradient(135deg,#1B3028 0%,#3D6CB8 50%,#00C4A7 100%);padding:40px 32px;text-align:center;">
-          <img src="https://prefabricadaselalba.cl/assets/images/logo.jpg" alt="El Alba" width="120" style="border-radius:12px;margin-bottom:20px;display:block;margin-left:auto;margin-right:auto;">
+          <img src="https://prefabricadaselalba.cl/assets/images/logo.webp" alt="El Alba" width="120" style="border-radius:12px;margin-bottom:20px;display:block;margin-left:auto;margin-right:auto;">
           <h1 style="margin:0 0 8px;color:#fff;font-size:26px;font-weight:700;line-height:1.2;">¡Hola, $nombre_corto! 👋</h1>
           <p style="margin:0;color:rgba(255,255,255,.85);font-size:15px;line-height:1.5;">Recibimos tu consulta y ya estamos trabajando<br>para darte la mejor respuesta.</p>
         </td>
