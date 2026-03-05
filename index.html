@@ -81,7 +81,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <script src="https://elfsightcdn.com/platform.js" async></script>
+
 
   <style>
     /* ── VARIABLES (paleta El Alba) ─────────────────── */
@@ -437,21 +437,54 @@
 
     /* ── TESTIMONIALS ──────────────────────────────── */
     .test-sec { background:var(--warm); }
-    .elfsight-wrap { width:100%; }
-    /* Integración visual Elfsight */
-    .elfsight-wrap .eapps-widget-toolbar { display:none !important; }
-    .eapps-google-reviews-list-item {
-      border-radius:18px !important;
-      border:1px solid rgba(0,196,167,.18) !important;
-      box-shadow:0 4px 18px rgba(0,0,0,.06) !important;
-      background:#fff !important;
+    .reviews-swiper { padding-bottom:44px !important; }
+    .rev-card {
+      background:#fff;
+      border-radius:20px;
+      padding:26px 24px 22px;
+      border:1px solid rgba(0,196,167,.14);
+      box-shadow:0 4px 22px rgba(0,0,0,.07);
+      height:auto;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      transition:var(--t);
     }
-    .eapps-google-reviews-list-item-text-content {
-      display:-webkit-box !important;
-      -webkit-line-clamp:4 !important;
-      -webkit-box-orient:vertical !important;
-      overflow:hidden !important;
+    .rev-card:hover { box-shadow:0 8px 36px rgba(0,196,167,.15); transform:translateY(-2px); }
+    .rev-top { display:flex; align-items:center; gap:12px; }
+    .rev-avatar {
+      width:46px; height:46px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.1rem; font-weight:800; color:#fff; flex-shrink:0;
     }
+    .rev-name { font-size:.88rem; font-weight:800; color:var(--td); line-height:1.2; }
+    .rev-date { font-size:.72rem; color:var(--muted); margin-top:2px; }
+    .rev-stars { color:#F5A623; font-size:.82rem; letter-spacing:1px; }
+    .rev-text {
+      font-size:.84rem; color:#4A6458; line-height:1.72;
+      flex:1;
+      display:-webkit-box; -webkit-line-clamp:5;
+      -webkit-box-orient:vertical; overflow:hidden;
+    }
+    .rev-footer { display:flex; align-items:center; justify-content:space-between; }
+    .rev-google {
+      display:flex; align-items:center; gap:5px;
+      font-size:.7rem; font-weight:700; color:var(--muted);
+    }
+    .rev-google svg { width:14px; height:14px; }
+    .rev-verified { font-size:.68rem; color:var(--teal-d); font-weight:600; }
+    .reviews-swiper .swiper-pagination-bullet { background:var(--teal); opacity:.35; }
+    .reviews-swiper .swiper-pagination-bullet-active { opacity:1; }
+    .rev-rating-bar {
+      display:flex; align-items:center; gap:14px;
+      justify-content:center; margin-bottom:32px; flex-wrap:wrap;
+    }
+    .rev-rating-num { font-size:2.6rem; font-weight:900; color:var(--td); line-height:1; }
+    .rev-rating-info { display:flex; flex-direction:column; gap:3px; }
+    .rev-rating-stars { color:#F5A623; font-size:1.1rem; letter-spacing:2px; }
+    .rev-rating-count { font-size:.78rem; color:var(--muted); font-weight:600; }
+    .rev-rating-logo { display:flex; align-items:center; gap:6px; font-size:.8rem; font-weight:700; color:var(--muted); }
+    .rev-rating-logo svg { width:18px; height:18px; }
 
     /* ── CONTACT ───────────────────────────────────── */
     .contact-sec { background:#fff; position:relative; overflow:hidden; }
@@ -1115,9 +1148,229 @@
       <h2 class="sec-title">Lo que dicen <span class="em">nuestros clientes</span></h2>
       <p class="sec-sub">+56 familias nos eligieron. Sus palabras son nuestro mayor orgullo.</p>
     </div>
-    <div class="elfsight-wrap reveal">
-      <div class="elfsight-app-3c51158e-7730-4e98-aff9-b5b02250e073" data-elfsight-app-lazy></div>
+    <!-- Rating global -->
+    <div class="rev-rating-bar reveal">
+      <div class="rev-rating-num">4.9</div>
+      <div class="rev-rating-info">
+        <div class="rev-rating-stars">★★★★★</div>
+        <div class="rev-rating-count">+56 reseñas verificadas</div>
+      </div>
+      <div class="rev-rating-logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Reseñas en Google
+      </div>
     </div>
+
+    <!-- Swiper de reseñas -->
+    <div class="swiper reviews-swiper reveal">
+      <div class="swiper-wrapper">
+
+        <!-- 1. Paola Vasquez -->
+        <div class="swiper-slide">
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-avatar" style="background:linear-gradient(135deg,#3D6CB8,#5B8DD9)">PV</div>
+              <div>
+                <div class="rev-name">Paola Vasquez</div>
+                <div class="rev-date">Hace 3 semanas</div>
+              </div>
+            </div>
+            <div class="rev-stars">★★★★★</div>
+            <div class="rev-text">Muy buena experiencia con todo el proceso de diseño y construcción. Teníamos desconfianza y preocupación como todos al querer contratar un servicio de construcción, y además estábamos viviendo en el extranjero… pero el equipo de El Alba nos acompañó en todo momento.</div>
+            <div class="rev-footer">
+              <div class="rev-google">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                Google
+              </div>
+              <span class="rev-verified">✓ Verificado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Maximiliano -->
+        <div class="swiper-slide">
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-avatar" style="background:linear-gradient(135deg,#00C4A7,#00A58C)">M</div>
+              <div>
+                <div class="rev-name">Maximiliano</div>
+                <div class="rev-date">Hace 2 semanas</div>
+              </div>
+            </div>
+            <div class="rev-stars">★★★★★</div>
+            <div class="rev-text">Muy profesionales, fue una muy buena experiencia, nos aportaron con ideas nuevas y de esa manera logramos nuestro objetivo y fue mayor a las expectativas. Recomendados 100%.</div>
+            <div class="rev-footer">
+              <div class="rev-google">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                Google
+              </div>
+              <span class="rev-verified">✓ Verificado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Marcelo Caramori -->
+        <div class="swiper-slide">
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-avatar" style="background:linear-gradient(135deg,#7B5EA7,#9B79C9)">MC</div>
+              <div>
+                <div class="rev-name">Marcelo Caramori</div>
+                <div class="rev-date">Hace 6 meses</div>
+              </div>
+            </div>
+            <div class="rev-stars">★★★★★</div>
+            <div class="rev-text">Constructora El Alba absolutamente recomendable para llevar a cabo cualquier proyecto de construcción de vivienda. Nos acaba de entregar la construcción de una casa en los términos pactados y en los tiempos estipulados. Excelente trabajo en todos los aspectos.</div>
+            <div class="rev-footer">
+              <div class="rev-google">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                Google
+              </div>
+              <span class="rev-verified">✓ Verificado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Melissa Cortez -->
+        <div class="swiper-slide">
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-avatar" style="background:linear-gradient(135deg,#E8553E,#F07B68)">MC</div>
+              <div>
+                <div class="rev-name">Melissa Cortez</div>
+                <div class="rev-date">Hace 8 meses</div>
+              </div>
+            </div>
+            <div class="rev-stars">★★★★★</div>
+            <div class="rev-text">Estoy muy agradecida con Casas Prefabricadas El Alba que llevó adelante la construcción de la casa de mis padres y sobrino. Fue una experiencia muy positiva desde el primer día. Durante todo el proceso pude observar el compromiso y la dedicación de todo el equipo.</div>
+            <div class="rev-footer">
+              <div class="rev-google">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                Google
+              </div>
+              <span class="rev-verified">✓ Verificado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Luis Cortez -->
+        <div class="swiper-slide">
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-avatar" style="background:linear-gradient(135deg,#2A7D4F,#3FA66A)">LC</div>
+              <div>
+                <div class="rev-name">Luis Cortez</div>
+                <div class="rev-date">Hace 8 meses</div>
+              </div>
+            </div>
+            <div class="rev-stars">★★★★★</div>
+            <div class="rev-text">Muy buena empresa. Los felicito por lo linda y cómoda que quedó nuestra casa especial para nuestro nieto con movilidad reducida. Ustedes entendieron nuestro requerimiento y lo ejecutaron de manera perfecta. Mil gracias.</div>
+            <div class="rev-footer">
+              <div class="rev-google">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                Google
+              </div>
+              <span class="rev-verified">✓ Verificado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Nicole -->
+        <div class="swiper-slide">
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-avatar" style="background:linear-gradient(135deg,#1A8CC9,#3BA8E0)">N</div>
+              <div>
+                <div class="rev-name">Nicole</div>
+                <div class="rev-date">Hace 8 meses</div>
+              </div>
+            </div>
+            <div class="rev-stars">★★★★★</div>
+            <div class="rev-text">Muy buena experiencia con Casas Prefabricadas El Alba, muy contentos con el resultado: construcción rápida y hermosa. Juan Carlos siempre estuvo en contacto con nosotros, resolviendo dudas y peticiones. Totalmente recomendados.</div>
+            <div class="rev-footer">
+              <div class="rev-google">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                Google
+              </div>
+              <span class="rev-verified">✓ Verificado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Dayana Luna -->
+        <div class="swiper-slide">
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-avatar" style="background:linear-gradient(135deg,#00A58C,#00C4A7)">DL</div>
+              <div>
+                <div class="rev-name">Dayana Luna</div>
+                <div class="rev-date">Hace 8 meses</div>
+              </div>
+            </div>
+            <div class="rev-stars">★★★★★</div>
+            <div class="rev-text">Muy buena empresa, donde la atención es buenísima al igual que la post venta. Juan Carlos siempre muy dispuesto a realizar lo que uno busca. Para mí excelente experiencia, sin dudas recomendada.</div>
+            <div class="rev-footer">
+              <div class="rev-google">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                Google
+              </div>
+              <span class="rev-verified">✓ Verificado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Leonardo Bravo -->
+        <div class="swiper-slide">
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-avatar" style="background:linear-gradient(135deg,#2A4F95,#3D6CB8)">LB</div>
+              <div>
+                <div class="rev-name">Leonardo Bravo</div>
+                <div class="rev-date">Hace 3 meses</div>
+              </div>
+            </div>
+            <div class="rev-stars">★★★★★</div>
+            <div class="rev-text">Muy buena experiencia, responsables y buena disposición para cambios o modificaciones de los diseños. El equipo siempre atento y comprometido con el resultado final.</div>
+            <div class="rev-footer">
+              <div class="rev-google">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                Google
+              </div>
+              <span class="rev-verified">✓ Verificado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Jessica De Galbau -->
+        <div class="swiper-slide">
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-avatar" style="background:linear-gradient(135deg,#C0754A,#E09570)">JG</div>
+              <div>
+                <div class="rev-name">Jessica De Galbau</div>
+                <div class="rev-date">Hace 5 años</div>
+              </div>
+            </div>
+            <div class="rev-stars">★★★★★</div>
+            <div class="rev-text">Excelente atención, te dan todos los detalles. Construyen proyectos llave en mano de todos los tamaños, bonitas terminaciones, buen precio y modifican el proyecto de acuerdo a las necesidades del comprador. Muy recomendados.</div>
+            <div class="rev-footer">
+              <div class="rev-google">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                Google
+              </div>
+              <span class="rev-verified">✓ Verificado</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /swiper-wrapper -->
+      <div class="swiper-pagination"></div>
+    </div><!-- /reviews-swiper -->
   </div>
 </section>
 
@@ -1351,7 +1604,18 @@ window.addEventListener('load', () => {
   }, 1700);
 });
 
-/* (Swiper del carrusel reemplazado por catálogo dinámico) */
+/* SWIPER — RESEÑAS */
+new Swiper('.reviews-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: { delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true },
+  pagination: { el: '.reviews-swiper .swiper-pagination', clickable: true },
+  breakpoints: {
+    640:  { slidesPerView: 2 },
+    1024: { slidesPerView: 3 }
+  }
+});
 
 /* NAVBAR SCROLL */
 window.addEventListener('scroll', () => {
