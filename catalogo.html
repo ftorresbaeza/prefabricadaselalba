@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Modelos | Casas Prefabricadas El Alba</title>
+  <meta name="description" content="32 modelos de casas prefabricadas disponibles, desde 36 hasta 255 m². Kit Autoconstrucción, Kit con Instalaciones y Llave en Mano. San Bernardo, Chile.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prefabricadaselalba.cl/catalogo.html">
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#3D6CB8;--blue-l:#5B8DD9;--blue-d:#2A4F95;--teal:#00C4A7;--teal-d:#00A58C;--grad:linear-gradient(135deg,#3D6CB8 0%,#00C4A7 100%);--dark:#1B3028;--dark-2:#243C30;--dark-3:#2E4A3C;--light:#EBF5F1;--white:#FFFFFF;--muted:#6E8C80;--green-wa:#25D366;--body-bg:#F4FAF7;--sec-alt:#EBF7F1;--warm:#EEF8F4;--warm-2:#E1F2EA;--td:#0C2018;--tb:#3A5848;--font:'Montserrat',sans-serif;--serif:'Playfair Display',serif;--ease:cubic-bezier(.25,.46,.45,.94);--t:all .4s var(--ease);}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font);background:var(--body-bg);color:var(--td);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{text-decoration:none;}
+    img{display:block;max-width:100%;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:var(--dark);}
+    ::-webkit-scrollbar-thumb{background:var(--teal);border-radius:3px;}
+
+    /* NAV */
+    .logo-img-wrap{background:#fff;border-radius:10px;padding:3px 7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .logo-img{height:40px;width:auto;object-fit:contain;display:block;}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 50px;display:flex;align-items:center;justify-content:space-between;background:rgba(27,48,40,.97);backdrop-filter:blur(20px);box-shadow:0 2px 28px rgba(0,0,0,.35);}
+    .nav-logo{display:flex;align-items:center;gap:11px;}
+    .nl-text .brand{font-size:1.05rem;font-weight:800;color:#fff;line-height:1.1;}
+    .nl-text .sub{font-size:.58rem;color:var(--teal);letter-spacing:2px;text-transform:uppercase;font-weight:600;}
+    .nav-links{display:flex;list-style:none;gap:6px;align-items:center;}
+    .nav-links a{color:rgba(255,255,255,.82);font-size:.78rem;font-weight:600;padding:7px 13px;border-radius:20px;transition:var(--t);letter-spacing:.3px;}
+    .nav-links a:hover{color:#fff;background:rgba(255,255,255,.1);}
+    .nav-cta{background:var(--grad)!important;color:#fff!important;padding:8px 18px!important;border-radius:50px!important;font-weight:700!important;box-shadow:0 4px 14px rgba(61,108,184,.35);}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:var(--t);}
+    .mob-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:1998;opacity:0;pointer-events:none;transition:opacity .3s;}
+    .mob-overlay.open{opacity:1;pointer-events:all;}
+    .mob-menu{position:fixed;top:0;right:-280px;width:260px;height:100%;background:var(--dark-2);z-index:1999;padding:70px 30px 30px;transition:right .35s var(--ease);}
+    .mob-menu.open{right:0;}
+    .mob-links{list-style:none;display:flex;flex-direction:column;gap:4px;}
+    .mob-links a{display:block;color:rgba(255,255,255,.85);font-size:.9rem;font-weight:600;padding:11px 14px;border-radius:12px;transition:var(--t);}
+    .mob-links a:hover{background:rgba(255,255,255,.08);color:#fff;}
+
+    /* HERO CATÁLOGO */
+    .cat-hero{background:var(--dark);padding:110px 40px 50px;text-align:center;}
+    .cat-hero-bread{font-size:.72rem;color:var(--teal);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:14px;}
+    .cat-hero-bread a{color:var(--teal);opacity:.7;transition:opacity .2s;}
+    .cat-hero-bread a:hover{opacity:1;}
+    .cat-hero h1{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3rem);color:#fff;margin-bottom:12px;}
+    .cat-hero h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .cat-hero p{color:rgba(255,255,255,.72);font-size:.9rem;max-width:560px;margin:0 auto 28px;}
+    .cat-hero-stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;}
+    .cat-hero-stat{text-align:center;}
+    .cat-hero-stat strong{display:block;font-size:1.6rem;font-weight:800;color:var(--teal);}
+    .cat-hero-stat span{font-size:.72rem;color:rgba(255,255,255,.45);letter-spacing:1px;text-transform:uppercase;}
+    /* Modalidades PDF */
+    .cat-hero-mods{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:4px;}
+    .cat-hero-mod{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:50px;font-size:.76rem;font-weight:700;text-decoration:none;transition:var(--t);border:1.5px solid;}
+    .cat-hero-mod-kit{background:rgba(61,108,184,.18);color:#9ab8e8;border-color:rgba(61,108,184,.4);}
+    .cat-hero-mod-kit:hover{background:rgba(61,108,184,.35);color:#c4d9f5;border-color:rgba(61,108,184,.7);}
+    .cat-hero-mod-inst{background:rgba(0,196,167,.15);color:#5dddcb;border-color:rgba(0,196,167,.4);}
+    .cat-hero-mod-inst:hover{background:rgba(0,196,167,.3);color:#8feedf;border-color:rgba(0,196,167,.7);}
+    .cat-hero-mod-llave{background:rgba(210,160,30,.18);color:#e8c96a;border-color:rgba(210,160,30,.45);}
+    .cat-hero-mod-llave:hover{background:rgba(210,160,30,.32);color:#f5da8a;border-color:rgba(210,160,30,.75);}
+    .cat-hero-mod-comp{background:rgba(180,60,180,.15);color:#d899e8;border-color:rgba(180,60,180,.4);}
+    .cat-hero-mod-comp:hover{background:rgba(180,60,180,.3);color:#eabaf5;border-color:rgba(180,60,180,.7);}
+    .cat-hero-mod i{font-size:.72rem;opacity:.8;}
+
+    /* GENERAL LAYOUT */
+    .wrap{max-width:1200px;margin:0 auto;padding:0 28px;}
+    .sec{padding:72px 0;}
+    .sec-head{margin-bottom:44px;}
+    .sec-head.text-c{text-align:center;}
+    .sec-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,196,167,.12);color:var(--teal-d);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:16px;}
+    .sec-title{font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:700;color:var(--td);line-height:1.25;margin-bottom:12px;}
+    .sec-title .em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .sec-sub{color:var(--tb);font-size:.88rem;max-width:600px;margin:0 auto;}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
+    .reveal.in{opacity:1;transform:none;}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+    /* FILTROS */
+    .cat-filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px;}
+    .cat-filter{border:1.5px solid rgba(0,196,167,.35);background:transparent;color:var(--teal-d);font-family:var(--font);font-weight:600;font-size:.78rem;padding:8px 18px;border-radius:50px;cursor:pointer;transition:var(--t);}
+    .cat-filter:hover{border-color:var(--teal);color:var(--teal-d);}
+    .cat-filter.active{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 6px 20px rgba(0,196,167,.28);}
+
+    /* BÚSQUEDA */
+    .cat-search-wrap{max-width:360px;margin:0 auto 32px;position:relative;}
+    .cat-search{width:100%;padding:11px 18px 11px 42px;border-radius:50px;border:1.5px solid rgba(0,196,167,.3);background:#fff;font-family:var(--font);font-size:.85rem;color:var(--td);outline:none;transition:var(--t);}
+    .cat-search:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,196,167,.12);}
+    .cat-search-icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--teal-d);font-size:.85rem;}
+
+    /* GRID */
+    .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .cat-card{border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 4px 24px rgba(0,0,0,.07);cursor:pointer;transition:var(--t);border:1px solid rgba(0,196,167,.12);display:flex;flex-direction:column;}
+    .cat-card:hover{transform:translateY(-7px);box-shadow:0 18px 44px rgba(0,196,167,.16);border-color:rgba(0,196,167,.35);}
+    .cat-card.hidden{display:none;}
+    .cat-thumb{position:relative;height:210px;overflow:hidden;background:#e8f0ec;}
+    .cat-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+    .cat-card:hover .cat-thumb img{transform:scale(1.07);}
+    .cat-style-pill{position:absolute;top:12px;left:12px;font-size:.7rem;font-weight:700;padding:4px 11px;border-radius:20px;backdrop-filter:blur(6px);}
+    .cat-count{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.65);color:#fff;font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:20px;display:flex;align-items:center;gap:4px;}
+    .cat-body{padding:18px 18px 16px;display:flex;flex-direction:column;flex:1;}
+    .cat-name{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--td);margin-bottom:4px;}
+    .cat-sub{font-size:.76rem;color:var(--tb);display:flex;align-items:center;gap:5px;}
+    .cat-price{display:flex;align-items:baseline;gap:6px;margin:6px 0 12px;}
+    .cat-price-label{font-size:.7rem;color:var(--tb);text-transform:uppercase;letter-spacing:.5px;font-weight:600;}
+    .cat-price-val{font-size:1.1rem;font-weight:800;color:var(--teal-d);letter-spacing:-.4px;}
+    .cat-price-pending{display:flex;align-items:center;gap:6px;margin:6px 0 12px;font-size:.78rem;color:var(--tb);font-style:italic;}
+    .cat-price-pending i{color:var(--teal);}
+    .cat-cta{display:flex;gap:8px;margin-top:auto;}
+    .cat-btn-ver{flex:1;padding:9px;border-radius:10px;border:1.5px solid rgba(0,196,167,.5);color:var(--teal-d);background:transparent;font-weight:700;font-size:.78rem;cursor:pointer;transition:var(--t);font-family:var(--font);}
+    .cat-btn-ver:hover{background:var(--teal);color:#fff;border-color:var(--teal);}
+    .cat-btn-wa2{padding:9px 13px;border-radius:10px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;font-size:.78rem;display:flex;align-items:center;gap:5px;transition:var(--t);}
+    .cat-btn-wa2:hover{background:#1DA855;}
+    .cat-btn-wa3{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 14px;border-radius:10px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;font-size:.78rem;transition:var(--t);}
+    .cat-btn-wa3:hover{background:#1DA855;}
+
+    /* SECCIÓN EXTRA (modelos sin foto) */
+    .cat-extra-wrap{margin-top:36px;}
+    .cat-extra-toggle{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border:1.5px dashed rgba(0,196,167,.35);border-radius:16px;background:rgba(0,196,167,.04);cursor:pointer;color:var(--teal-d);font-weight:600;font-size:.88rem;font-family:var(--font);transition:var(--t);}
+    .cat-extra-toggle:hover{background:rgba(0,196,167,.09);border-color:var(--teal);}
+    .cat-extra-icon{font-size:.9rem;}
+    .cat-extra-arrow{font-size:.75rem;margin-left:auto;transition:transform .3s;}
+    .cat-extra-toggle.open .cat-extra-arrow{transform:rotate(180deg);}
+    .cat-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-height:0;overflow:hidden;transition:max-height .55s ease,opacity .35s ease,margin .35s ease;opacity:0;margin-top:0;}
+    .cat-mini-grid.open{max-height:2400px;opacity:1;margin-top:14px;}
+    .cat-mini{display:flex;flex-direction:column;gap:10px;background:#fff;border-radius:16px;padding:14px;border:1px solid rgba(0,196,167,.18);box-shadow:0 2px 8px rgba(0,0,0,.05);transition:var(--t);}
+    .cat-mini:hover{border-color:rgba(0,196,167,.42);box-shadow:0 4px 18px rgba(0,196,167,.14);}
+    .cat-mini-head{display:flex;align-items:center;gap:10px;}
+    .cat-mini-badge{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0;}
+    .cat-mini-name{font-weight:700;font-size:.88rem;color:var(--td);}
+    .cat-mini-precios{display:flex;flex-direction:column;gap:0;border-radius:10px;overflow:hidden;border:1px solid rgba(0,196,167,.18);}
+    .cat-mini-pr{display:flex;justify-content:space-between;align-items:center;padding:7px 10px;font-size:.76rem;border-bottom:1px solid rgba(0,196,167,.1);}
+    .cat-mini-pr:last-child{border-bottom:none;background:rgba(0,196,167,.08);}
+    .cat-mini-pr span{color:var(--tb);}
+    .cat-mini-pr strong{color:var(--teal-d);font-weight:800;font-variant-numeric:tabular-nums;}
+    .cat-mini-pr:last-child span{color:var(--teal-d);font-weight:600;}
+    .cat-mini-footer{display:flex;justify-content:flex-end;}
+    .cat-mini-wa{display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:20px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;font-size:.76rem;transition:var(--t);}
+    .cat-mini-wa:hover{background:#1DA855;}
+
+    /* MODAL */
+    .cmod-overlay{position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:20px;}
+    .cmod-overlay.open{opacity:1;pointer-events:all;}
+    .cmod-box{background:#fff;border-radius:22px;overflow:hidden;max-width:960px;width:100%;max-height:92vh;display:grid;grid-template-rows:1fr auto;}
+    .cmod-gal{position:relative;background:#111;overflow:hidden;}
+    .cmod-swiper{height:520px;}
+    .cmod-swiper .swiper-slide{display:flex;align-items:center;justify-content:center;}
+    .cmod-swiper img{width:100%;height:100%;object-fit:contain;}
+    .cmod-close{position:absolute;top:14px;right:14px;z-index:10;width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,.65);border:none;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--t);line-height:1;}
+    .cmod-close:hover{background:rgba(0,0,0,.9);transform:scale(1.1);}
+    .cmod-gal .swiper-button-prev,.cmod-gal .swiper-button-next{color:#fff!important;background:rgba(0,0,0,.55);width:44px!important;height:44px!important;border-radius:50%;border:1px solid rgba(255,255,255,.2);}
+    .cmod-gal .swiper-button-prev::after,.cmod-gal .swiper-button-next::after{font-size:.9rem!important;}
+    .cmod-gal .swiper-pagination-bullet{background:#fff!important;opacity:.45;width:8px;height:8px;}
+    .cmod-gal .swiper-pagination-bullet-active{opacity:1!important;transform:scale(1.3);}
+    .cmod-info{padding:16px 26px 22px;display:flex;flex-direction:column;gap:14px;border-top:1px solid rgba(0,196,167,.15);}
+    .cmod-info-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+    .cmod-title{margin:0;font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--td);}
+    .cmod-meta{margin:5px 0 0;font-size:.8rem;}
+    .cmod-price-table{display:grid;grid-template-columns:repeat(3,1fr);border-radius:14px;overflow:hidden;border:1.5px solid rgba(0,196,167,.25);}
+    .cmod-pt-row{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 10px;text-align:center;gap:5px;border-right:1px solid rgba(0,196,167,.18);}
+    .cmod-pt-row:last-child{border-right:none;}
+    .cmod-pt-label{color:var(--tb);font-size:.75rem;line-height:1.3;}
+    .cmod-pt-val{font-weight:800;color:var(--teal-d);font-size:.92rem;font-variant-numeric:tabular-nums;}
+    .cmod-pt-highlight{background:rgba(0,196,167,.1);}
+    .cmod-pt-highlight .cmod-pt-label{color:var(--teal-d);font-weight:600;}
+    .cmod-pt-highlight .cmod-pt-val{font-size:1.05rem;}
+    .cmod-actions{display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;}
+    .cmod-wa-btn{display:flex;align-items:center;gap:7px;padding:11px 20px;background:#25D366;color:#fff;border-radius:50px;font-weight:700;font-size:.82rem;text-decoration:none;transition:var(--t);white-space:nowrap;}
+    .cmod-wa-btn:hover{background:#1DA855;transform:translateY(-2px);}
+    .cmod-ct-btn{display:flex;align-items:center;gap:7px;padding:11px 20px;background:var(--grad);color:#fff;border-radius:50px;font-weight:700;font-size:.82rem;cursor:pointer;border:none;font-family:var(--font);transition:var(--t);white-space:nowrap;}
+    .cmod-ct-btn:hover{opacity:.9;transform:translateY(-2px);}
+
+    /* FOOTER */
+    .footer{background:var(--dark);color:rgba(255,255,255,.7);padding:56px 0 0;}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+    .foot-brand{display:flex;align-items:center;gap:11px;margin-bottom:18px;}
+    .foot-brand .logo-img{height:38px;}
+    .foot-h{font-size:.75rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:14px;}
+    .foot-links{list-style:none;display:flex;flex-direction:column;gap:8px;}
+    .foot-links a{color:rgba(255,255,255,.65);font-size:.83rem;transition:var(--t);}
+    .foot-links a:hover{color:var(--teal);}
+    .foot-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.08);padding:20px 0;font-size:.75rem;color:rgba(255,255,255,.4);}
+
+    /* WA FLOTANTE */
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:900;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 28px rgba(37,211,102,.45);font-size:1.5rem;color:#fff;text-decoration:none;transition:var(--t);}
+    .wa-float:hover{transform:scale(1.12);box-shadow:0 10px 36px rgba(37,211,102,.55);}
+
+    /* BADGE NUEVO */
+    .cat-badge-new{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#ff6b35,#f7c948);color:#fff;font-size:.62rem;font-weight:800;padding:3px 9px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase;}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .nav{padding:13px 24px;}
+      .nav-links{display:none;}
+      .hamburger{display:flex;}
+      .cat-grid{grid-template-columns:repeat(2,1fr);}
+      .cat-mini-grid{grid-template-columns:repeat(2,1fr);}
+      .cmod-box{grid-template-rows:auto auto;}
+      .cmod-swiper{height:360px;}
+      .cmod-info-head{flex-direction:column;}
+      .cmod-actions{width:100%;}
+      .foot-grid{grid-template-columns:1fr 1fr;}
+      .cat-hero{padding:90px 24px 40px;}
+    }
+    @media(max-width:480px){
+      .cat-grid{grid-template-columns:1fr;}
+      .cat-mini-grid{grid-template-columns:1fr;}
+      .cat-filter{padding:7px 14px;font-size:.76rem;}
+      .cmod-swiper{height:260px;}
+      .cmod-price-table{grid-template-columns:1fr;}
+      .cmod-pt-row{border-right:none;border-bottom:1px solid rgba(0,196,167,.18);}
+      .cmod-pt-row:last-child{border-bottom:none;}
+      .foot-grid{grid-template-columns:1fr;}
+      .cat-hero-stats{gap:20px;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader" style="position:fixed;inset:0;background:var(--dark);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;">
+  <div style="background:#fff;border-radius:10px;padding:3px 7px;"><img src="assets/images/logo.jpg" style="height:56px;width:auto;display:block;" alt="El Alba"></div>
+  <div style="width:220px;height:3px;background:var(--dark-3);border-radius:2px;overflow:hidden;"><div style="height:100%;background:var(--grad);border-radius:2px;animation:ldf 1.8s ease forwards;"></div></div>
+  <div style="font-size:.72rem;letter-spacing:3px;color:var(--muted);text-transform:uppercase;">Cargando catálogo...</div>
+</div>
+<style>@keyframes ldf{from{width:0}to{width:100%}}</style>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html#inicio" class="nav-logo">
+    <div class="logo-img-wrap"><img src="assets/images/logo.jpg" alt="El Alba" class="logo-img"></div>
+    <div class="nl-text"><div class="brand">EL ALBA</div><div class="sub">Casas Prefabricadas</div></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="index.html#nosotros">Nosotros</a></li>
+    <li><a href="index.html#galeria">Galería</a></li>
+    <li><a href="index.html#videos">Videos</a></li>
+    <li><a href="index.html#opiniones">Opiniones</a></li>
+    <li><a href="index.html#contacto">Contacto</a></li>
+    <li><a href="https://wa.me/56931846889?text=Hola!%20Quiero%20cotizar%20una%20casa%20prefabricada" target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> Cotizar</a></li>
+  </ul>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-overlay" id="mobOv"></div>
+<div class="mob-menu" id="mobMenu">
+  <ul class="mob-links">
+    <li><a href="index.html">🏠 Inicio</a></li>
+    <li><a href="index.html#nosotros">Nosotros</a></li>
+    <li><a href="index.html#galeria">Galería</a></li>
+    <li><a href="index.html#contacto">Contacto</a></li>
+    <li><a href="https://wa.me/56931846889?text=Hola!%20Quiero%20cotizar" target="_blank" style="color:var(--green-wa)!important"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</a></li>
+  </ul>
+</div>
+
+<!-- HERO CATÁLOGO -->
+<header class="cat-hero">
+  <div class="cat-hero-bread">
+    <a href="index.html">Inicio</a> &rsaquo; Catálogo de Modelos
+  </div>
+  <h1>Catálogo de <em>Modelos</em></h1>
+  <p>Desde 36 hasta 255 m² — todos 100% personalizables y con entrega a todo Chile.</p>
+  <div class="cat-hero-stats">
+    <div class="cat-hero-stat"><strong>32</strong><span>Modelos</span></div>
+    <div class="cat-hero-stat"><strong>3</strong><span>Modalidades</span></div>
+    <div class="cat-hero-stat"><strong>+56</strong><span>Reseñas Google</span></div>
+  </div>
+
+  <!-- Modalidades: links a fichas técnicas PDF -->
+  <p style="font-size:.68rem;color:rgba(255,255,255,.38);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Descargar detalle técnico por modalidad</p>
+  <div class="cat-hero-mods">
+    <a href="assets/detalles_tecnicos/DETALLE%20TECNICO%20KIT%20COMPLETO%20DE%20AUTOCONSTRUCCION.pdf"
+       target="_blank" class="cat-hero-mod cat-hero-mod-kit">
+      <i class="fas fa-tools"></i> Kit Autoconstrucción
+      <i class="fas fa-file-pdf"></i>
+    </a>
+    <a href="assets/detalles_tecnicos/DETALLE%20TECNICO%20KIT%20CON%20INSTALACIONES.pdf"
+       target="_blank" class="cat-hero-mod cat-hero-mod-inst">
+      <i class="fas fa-bolt"></i> Kit con Instalaciones
+      <i class="fas fa-file-pdf"></i>
+    </a>
+    <a href="assets/detalles_tecnicos/DETALLE%20TECNICO%20LLAVE%20EN%20MANO.pdf"
+       target="_blank" class="cat-hero-mod cat-hero-mod-llave">
+      <i class="fas fa-home"></i> Llave en Mano
+      <i class="fas fa-file-pdf"></i>
+    </a>
+    <a href="assets/detalles_tecnicos/CUADRO%20COMPARATIVO%20-%20CASAS%20EL%20ALBA%20.pdf"
+       target="_blank" class="cat-hero-mod cat-hero-mod-comp">
+      <i class="fas fa-table"></i> Cuadro Comparativo
+      <i class="fas fa-file-pdf"></i>
+    </a>
+  </div>
+</header>
+
+<!-- CATÁLOGO -->
+<section class="sec" id="modelos" style="background:var(--body-bg);">
+  <div class="wrap">
+    <div class="cat-search-wrap reveal">
+      <i class="fas fa-search cat-search-icon"></i>
+      <input type="text" class="cat-search" id="catSearch" placeholder="Buscar por m², estilo o precio...">
+    </div>
+    <div class="cat-filters reveal" id="catFilters">
+      <button class="cat-filter active" data-filter="all">🏠 Todos</button>
+      <button class="cat-filter" data-filter="Moderno">🏗️ Moderno</button>
+      <button class="cat-filter" data-filter="Americana">🏡 Americana</button>
+      <button class="cat-filter" data-filter="Mediterránea">🌊 Mediterránea</button>
+      <button class="cat-filter" data-filter="Tradicional">🏛️ Tradicional</button>
+      <button class="cat-filter" data-filter="Colonial">👑 Colonial</button>
+      <button class="cat-filter" data-filter="2 Niveles">🏢 2 Niveles</button>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+    <div class="cat-extra-wrap" id="catExtraWrap" style="display:none;">
+      <button class="cat-extra-toggle" id="catExtraToggle" onclick="toggleExtra()">
+        <span class="cat-extra-icon"><i class="fas fa-th-list"></i></span>
+        <span id="catExtraLabel">Ver modelos adicionales</span>
+        <i class="fas fa-chevron-down cat-extra-arrow" id="catExtraArrow"></i>
+      </button>
+      <div class="cat-mini-grid" id="catMiniGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="cmod-overlay" id="cmodOverlay">
+  <div class="cmod-box">
+    <div class="cmod-gal">
+      <button class="cmod-close" onclick="closeCmod()">✕</button>
+      <div class="swiper cmod-swiper" id="cmodSwiper">
+        <div class="swiper-wrapper" id="cmodSlides"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <div class="cmod-info">
+      <div class="cmod-info-head">
+        <div>
+          <h3 class="cmod-title" id="cmodTitle">-</h3>
+          <div class="cmod-meta" id="cmodMeta"></div>
+        </div>
+        <div class="cmod-actions">
+          <a href="#" class="cmod-wa-btn" id="cmodWa" target="_blank"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</a>
+          <button class="cmod-ct-btn" onclick="closeCmod();window.location.href='index.html#contacto';"><i class="fas fa-envelope"></i> Enviar consulta</button>
+        </div>
+      </div>
+      <div id="cmodPrices"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <div class="logo-img-wrap"><img src="assets/images/logo.jpg" alt="El Alba" class="logo-img"></div>
+          <div class="nl-text"><div class="brand" style="color:#fff;">EL ALBA</div><div class="sub">Casas Prefabricadas</div></div>
+        </div>
+        <p style="font-size:.82rem;line-height:1.7;max-width:280px;">"La felicidad no se compra, se construye." Más de 10 años construyendo sueños en Chile.</p>
+      </div>
+      <div>
+        <div class="foot-h">Navegación</div>
+        <ul class="foot-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#galeria">Galería</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Modelos</div>
+        <ul class="foot-links">
+          <li><a href="#" onclick="filterCat('Moderno')">🏗️ Moderna</a></li>
+          <li><a href="#" onclick="filterCat('Americana')">🏡 Americana</a></li>
+          <li><a href="#" onclick="filterCat('Mediterránea')">🌊 Mediterránea</a></li>
+          <li><a href="#" onclick="filterCat('Tradicional')">🏛️ Tradicional</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Contacto</div>
+        <ul class="foot-links">
+          <li><a href="tel:+56931846889">+56 9 3184 6889</a></li>
+          <li><a href="mailto:contacto@prefabricadaselalba.cl">contacto@prefabricadaselalba.cl</a></li>
+          <li><a href="https://wa.me/56931846889" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+          <li><a href="index.html#contacto">Formulario de contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025 Casas Prefabricadas El Alba. Todos los derechos reservados.</span>
+      <span>San Bernardo, Región Metropolitana, Chile</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/56931846889?text=Hola!%20Quiero%20información%20sobre%20casas%20prefabricadas" target="_blank" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+
+<!-- JS: Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- JS: FOTOS_DATA — fallback hardcodeado; en producción se reemplaza vía fetch(api/fotos-data.php) -->
+<script>
+let FOTOS_DATA = {
+  "36m2":                  ["Casas Prefabricadas 36 m2.jpg","Plano Casa 36 m2.jpg"],
+  "42m2":                  ["Casa Prefabricada 42 m2 (1).jpg","Casa Prefabricada 42 m2 (2).jpg","Casa Prefabricada 42 m2 (3).jpg","Casa Prefabricada 42 m2 (4).jpg","Casa Prefabricada 42 m2 (5).jpg","Casa Prefabricada 42 m2 (6).jpg","Plano Casa 42 m2.jpg"],
+  "45.6m2":                ["Casa Prefabricada  45.6 m2 (1).jpg","Casa Prefabricada  45.6 m2 (2).jpg","Casa Prefabricada  45.6 m2 (3).jpg","Casa Prefabricada  45.6 m2 (4).jpg","Casa Prefabricada  45.6 m2 (5).jpg","Casa Prefabricada  45.6 m2 (6).jpg","Casa Prefabricada  45.6 m2 (7).jpg","Casa Prefabricada  45.6 m2 (8).jpg","Casa Prefabricada  45.6 m2 (9).jpg","Plano Casa Prefabricada 45.6 m2.jpg"],
+  "47m2":                  ["Modelo 47 m2 - Imagen.png","Plano Casa 47 m2.png"],
+  "54m2":                  ["Modelo 54 m2.jpg z.png","Plano Casa 54 m2.jpg"],
+  "57m2":                  ["Casa  57 m2 (1).jpg","Casa  57 m2 (2).jpg","Casa  57 m2 (3).jpg","Plano Casa 57 m2.png"],
+  "72m2":                  ["Casa 72 m2.jpeg","Plano de Casa 72 m2.jpg"],
+  "74m2":                  ["Casa 74 m2.jpg","Plano Casa 74 m2.jpg"],
+  "76m2":                  ["Casa Prefabricada 76 m2.jpg","Plano Casa 76 m2.jpg"],
+  "80m2":                  ["Casa Prefabricada 80 m2 (1).jpg","Casa Prefabricada 80 m2 (2).jpg","Plano 80 m2.jpg"],
+  "83m2":                  ["Casa Prefabricada 83 m2  (1).jpg","Casa Prefabricada 83 m2  (2).jpg","Casa Prefabricada 83 m2  (4).jpg","Casa Prefabricada 83 m2  (5).jpg","Casa Prefabricada 83 m2  (6).jpg","Plano Casa 83 m2.jpg"],
+  "94m2":                  ["Casa 94 m2 (1).jpg","Casa 94 m2 (2).jpg","Casa 94 m2 (3).jpg","Casa 94 m2 (4).jpg","Casa 94 m2 (5).jpg","Plano Casa 94 m2.jpg"],
+  "94mts-estacionamiento": ["Casa 94 m2 + Estacionamientos - Mediterranea (1).jpg","Casa 94 m2 + Estacionamientos - Mediterranea (2).jpg","Casa 94 m2 + Estacionamientos - Mediterranea (3).jpg","Plano Casa 94 m2 + Terrazas - Mediterranea.jpg"],
+  "100m2":                 ["Modelo 100 m2.jpg","Plano 100 m2.jpg"],
+  "107m2":                 ["Casa 107 m2 (1).jpg","Casa 107 m2 (2).jpg","Casa 107 m2 (3).jpg","Casa 107 m2 (4).jpg","Casa 107 m2 (5).jpg","Casa 107 m2 (6).jpg","Casa 107 m2 (7).jpg","Casa 107 m2 (8).jpg","Casa 107 m2 (9).jpg","Plano Casa 107 m2.jpg"],
+  "117m2":                 ["Casa 117 m2 - 2 Niveles.jpg","Plano Casa 117 2 - 2 Niveles.jpg"],
+  "118m2":                 ["Casa 118 m2 (1).jpeg","Casa 118 m2 (2).jpeg","Plano Casa 118 m2.jpg"],
+  "118m2-americana":       ["Casa 120 m2 - Americana (1).JPG","Casa 120 m2 - Americana (2).JPG"],
+  "120m2":                 ["Casa 120 m2 (1).jpg","Casa 120 m2 (2).jpg","Casa 120 m2 (3).jpg","Casa 120 m2 (4).jpg","Casa 120 m2 (5).jpg","Casa 120 m2 (6).jpg","Casa 120 m2 (7).jpg","Casa 120 m2 (8).jpg","Casa 120 m2 (9).jpg","Casa 120 m2 (10).jpg","Casa 120 m2 (11).jpg","Casa 120 m2 (12).jpg","Casa 120 m2 (13).jpg","Casa 120 m2 (14).jpg","Casa 120 m2 (15).jpg","Plano Casa 120 m2.jpg"],
+  "130m2-tradicional":     ["Casa 130 m2 - Tradicional (1).jpg","Casa 130 m2 - Tradicional (2).jpg","Casa 130 m2 - Tradicional (3).jpg","Plano Casa 130 m2.jpg"],
+  "134m2":                 ["Modelo 134 m2 (1).png","Modelo 134 m2 (3).png","Modelo 134 m2 (4).png","Plano Casa 134 m2.png"],
+  "136m2":                 ["Casa 136 m2  (1).jpg","Casa 136 m2  (2).jpg","Casa 136 m2  (3).jpg","Plano Casa 136 m2.jpg"],
+  "138m2":                 ["Casa 138 m2.jpg","Casa 138 m2  (1).jpg","Casa 138 m2  (2).jpg","Casa 138 m2 (2).jpg","Plano Casa 138 m2.jpg"],
+  "139m2":                 ["Casa 139 m2 - Americana (1).jpg","Casa 139 m2 - Americana (2).jpg","Casa 139 m2 - Americana (3).jpg","Casa 139 m2 - Americana (4).jpg","Plano Casa 139 m2.jpg"],
+  "140m2":                 ["Casa 140 m2 - Americana (1).jpg","Casa 140 m2 - Americana (2).jpg","Plano Casa 140 m2 - Americano.jpg"],
+  "141m2":                 ["Casa 141 m2 - Tradicional.jpg","Plano Casa 141 m2.jpg"],
+  "149m2-mediterranea":    ["Casa 149 m2 - Mediterranea (1).jpg","Casa 149 m2 - Mediterranea (2).jpg","Casa 149 m2 - Mediterranea (3).jpg","Casa 149 m2 - Mediterranea (4).jpg","Plano Casa 149 m2 (2).jpg"],
+  "149m2-tradicional":     ["Casa 149 m2 (7) - Tradicional.jpg","Casa 149 m2 (8) - Tradicional.jpg","Casa 149 m2 (9) - Tradicional.jpg","Casa 149 m2 (10) - Tradicional.jpg","Casa 149 m2 (11) - Tradicional.jpg","Casa 149 m2 (12) - Tradicional.jpg","Casa 149 m2 (13) - Tradicional.jpg","Plano Casa 149 m2 - Tradicional.jpg"],
+  "192m2-americana":       ["Casa 191 m2 - Americana.jpg","Plano Casa 191 m2 - Americana.jpg"],
+  "193m2-mediterranea":    ["Casa 193 m2 - Mediterranea.jpg","Plano Casa 193 m2.jpg"],
+  "196m2-mediterranea":    ["Casa 196 m2 - Mediterranea.jpg","Plano Casa 196 m2.jpg"],
+  "255m2-colonial":        ["Casa 255 m2 - Colonial (1).jpg","Casa 255 m2 - Colonial (2).jpg","Casa 255 m2 - Colonial (3).jpg","Plano Casa 255 m2 - Colonial.jpg"]
+};
+</script>
+
+<script>
+/* ── Loader ── */
+window.addEventListener('load', () => {
+  setTimeout(() => { document.getElementById('loader').style.opacity='0'; setTimeout(()=>document.getElementById('loader').style.display='none',400); }, 600);
+});
+
+/* ── Scroll reveal ── */
+const io = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('in'); }), {threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ── Nav solid on scroll ── */
+window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('solid', scrollY > 60));
+document.getElementById('nav').classList.add('solid');
+
+/* ── Mobile menu ── */
+const ham=document.getElementById('ham'),mob=document.getElementById('mobMenu'),ov=document.getElementById('mobOv');
+function toggleMob(){mob.classList.toggle('open');ov.classList.toggle('open');}
+ham.addEventListener('click',toggleMob);ov.addEventListener('click',toggleMob);
+document.querySelectorAll('.mob-links a').forEach(a=>a.addEventListener('click',toggleMob));
+
+/* ── DATOS ── */
+function getFotos(carpeta){ return (carpeta && FOTOS_DATA[carpeta]) ? FOTOS_DATA[carpeta] : []; }
+
+const MODELOS = [
+  // ─ Moderno ──────────────────────────────────────────────────────────────
+  { id:'36m2',       nombre:'Casa 36 m²',              metros:36,   estilo:'Moderno',      carpeta:'36m2' },
+  { id:'42m2',       nombre:'Casa 42 m²',              metros:42,   estilo:'Moderno',      carpeta:'42m2' },
+  { id:'45m2',       nombre:'Casa 45,6 m²',            metros:45.6, estilo:'Moderno',      carpeta:'45.6m2' },
+  { id:'47m2',       nombre:'Casa 47 m²',              metros:47,   estilo:'Moderno',      carpeta:'47m2' },
+  { id:'54m2',       nombre:'Casa 54 m²',              metros:54,   estilo:'Moderno',      carpeta:'54m2' },
+  { id:'57m2',       nombre:'Casa 57 m²',              metros:57,   estilo:'Moderno',      carpeta:'57m2' },
+  { id:'72m2',       nombre:'Casa 72 m²',              metros:72,   estilo:'Moderno',      carpeta:'72m2' },
+  { id:'74m2',       nombre:'Casa 74 m²',              metros:74,   estilo:'Moderno',      carpeta:'74m2' },
+  { id:'76m2',       nombre:'Casa 76 m²',              metros:76,   estilo:'Moderno',      carpeta:'76m2' },
+  { id:'80m2',       nombre:'Casa 80 m²',              metros:80,   estilo:'Moderno',      carpeta:'80m2' },
+  { id:'83m2',       nombre:'Casa 83 m²',              metros:83,   estilo:'Moderno',      carpeta:'83m2' },
+  { id:'94m2',       nombre:'Casa 94 m²',              metros:94,   estilo:'Moderno',      carpeta:'94m2' },
+  { id:'94m2-est',   nombre:'Casa 94 m² Mediterránea', metros:94,   estilo:'Mediterránea', carpeta:'94mts-estacionamiento' },
+  { id:'100m2',      nombre:'Casa 100 m²',             metros:100,  estilo:'Moderno',      carpeta:'100m2' },
+  { id:'107m2',      nombre:'Casa 107 m²',             metros:107,  estilo:'Moderno',      carpeta:'107m2' },
+  { id:'117m2',      nombre:'Casa 117 m² · 2 Niveles', metros:117,  estilo:'2 Niveles',    carpeta:'117m2' },
+  { id:'118m2',      nombre:'Casa 118 m²',             metros:118,  estilo:'Moderno',      carpeta:'118m2' },
+  { id:'118m2-am',   nombre:'Casa 120 m² Americana',   metros:120,  estilo:'Americana',    carpeta:'118m2-americana' },
+  { id:'120m2',      nombre:'Casa 120 m² Mediterránea',metros:120,  estilo:'Mediterránea', carpeta:'120m2' },
+  { id:'130m2',      nombre:'Casa 130 m²',             metros:130,  estilo:'Tradicional',  carpeta:'130m2-tradicional' },
+  { id:'136m2',      nombre:'Casa 136 m²',             metros:136,  estilo:'Moderno',      carpeta:'136m2' },
+  { id:'138m2',      nombre:'Casa 138 m²',             metros:138,  estilo:'Moderno',      carpeta:'138m2' },
+  { id:'139m2',      nombre:'Casa 139 m²',             metros:139,  estilo:'Americana',    carpeta:'139m2' },
+  { id:'140m2',      nombre:'Casa 140 m²',             metros:140,  estilo:'Americana',    carpeta:'140m2' },
+  { id:'192m2',      nombre:'Casa 191 m² Americana',   metros:191,  estilo:'Americana',    carpeta:'192m2-americana' },
+  { id:'149m2-med',  nombre:'Casa 149 m² Mediterránea',metros:149,  estilo:'Mediterránea', carpeta:'149m2-mediterranea' },
+  { id:'193m2',      nombre:'Casa 193 m² Mediterránea',metros:193,  estilo:'Mediterránea', carpeta:'193m2-mediterranea' },
+  { id:'196m2',      nombre:'Casa 196 m² Mediterránea',metros:196,  estilo:'Mediterránea', carpeta:'196m2-mediterranea' },
+  { id:'134m2',      nombre:'Casa 134 m² Tradicional', metros:134,  estilo:'Tradicional',  carpeta:'134m2' },
+  { id:'141m2',      nombre:'Casa 141 m²',             metros:141,  estilo:'Tradicional',  carpeta:'141m2' },
+  { id:'149m2-trad', nombre:'Casa 149 m² Tradicional', metros:149,  estilo:'Tradicional',  carpeta:'149m2-tradicional' },
+  { id:'255m2',      nombre:'Casa 255 m² Colonial',    metros:255,  estilo:'Colonial',     carpeta:'255m2-colonial' },
+];
+
+const PRECIOS = {
+  '36m2':      { desde:'7.740.000',  instalaciones:'18.720.000', llaveEnMano:'21.960.000' },
+  '42m2':      { desde:'9.030.000',  instalaciones:'21.840.000', llaveEnMano:'25.620.000' },
+  '45m2':      { desde:'9.804.000',  instalaciones:'23.712.000', llaveEnMano:'27.816.000' },
+  '47m2':      { desde:'10.105.000', instalaciones:'24.440.000', llaveEnMano:'28.670.000' },
+  '54m2':      { desde:'11.610.000', instalaciones:'28.080.000', llaveEnMano:'32.940.000' },
+  '57m2':      { desde:'12.255.000', instalaciones:'29.640.000', llaveEnMano:'34.770.000' },
+  '72m2':      { desde:'15.480.000', instalaciones:'37.440.000', llaveEnMano:'43.920.000' },
+  '74m2':      { desde:'15.910.000', instalaciones:'38.480.000', llaveEnMano:'45.140.000' },
+  '76m2':      { desde:'16.340.000', instalaciones:'39.520.000', llaveEnMano:'46.360.000' },
+  '80m2':      { desde:'17.200.000', instalaciones:'41.600.000', llaveEnMano:'48.800.000' },
+  '83m2':      { desde:'17.845.000', instalaciones:'43.160.000', llaveEnMano:'50.630.000' },
+  '94m2':      { desde:'20.210.000', instalaciones:'48.880.000', llaveEnMano:'57.340.000' },
+  '100m2':     { desde:'21.500.000', instalaciones:'52.000.000', llaveEnMano:'61.000.000' },
+  '107m2':     { desde:'23.005.000', instalaciones:'55.640.000', llaveEnMano:'65.270.000' },
+  '117m2':     { desde:'30.303.000', instalaciones:'48.970.000', llaveEnMano:'59.760.000' },
+  '118m2':     { desde:'25.370.000', instalaciones:'61.360.000', llaveEnMano:'71.980.000' },
+  '136m2':     { desde:'29.240.000', instalaciones:'70.720.000', llaveEnMano:'82.960.000' },
+  '138m2':     { desde:'29.670.000', instalaciones:'71.760.000', llaveEnMano:'84.180.000' },
+  '118m2-am':  { desde:'25.800.000', instalaciones:'62.400.000', llaveEnMano:'73.200.000' },
+  '139m2':     { desde:'29.885.000', instalaciones:'72.280.000', llaveEnMano:'84.790.000' },
+  '140m2':     { desde:'30.100.000', instalaciones:'72.800.000', llaveEnMano:'85.400.000' },
+  '192m2':     { desde:'41.065.000', instalaciones:'99.320.000', llaveEnMano:'116.510.000' },
+  '94m2-est':  { desde:'21.526.000', instalaciones:'50.760.000', llaveEnMano:'59.220.000' },
+  '120m2':     { desde:'27.600.000', instalaciones:'43.200.000', llaveEnMano:'50.400.000' },
+  '149m2-med': { desde:'31.740.000', instalaciones:'80.460.000', llaveEnMano:'93.870.000' },
+  '193m2':     { desde:'44.390.000', instalaciones:'104.220.000', llaveEnMano:'121.590.000' },
+  '196m2':     { desde:'45.080.000', instalaciones:'101.920.000', llaveEnMano:'119.560.000' },
+  '130m2':     { desde:'27.950.000', instalaciones:'67.600.000', llaveEnMano:'79.300.000' },
+  '134m2':     { desde:'28.810.000', instalaciones:'69.680.000', llaveEnMano:'81.740.000' },
+  '141m2':     { desde:'30.315.000', instalaciones:'73.320.000', llaveEnMano:'86.010.000' },
+  '149m2-trad':{ desde:'28.810.000', instalaciones:'69.680.000', llaveEnMano:'81.740.000' },
+  '255m2':     { desde:'58.650.000', instalaciones:'132.600.000', llaveEnMano:'155.550.000' },
+};
+
+const ESTILO_CLR = {
+  'Moderno':      { bg:'rgba(61,108,184,.15)',  fg:'#2F5298', icon:'🏗️' },
+  'Americana':    { bg:'rgba(210,105,30,.15)',  fg:'#B05A0A', icon:'🏡' },
+  'Mediterránea': { bg:'rgba(0,196,167,.15)',   fg:'#007D6A', icon:'🌊' },
+  'Tradicional':  { bg:'rgba(140,100,60,.15)',  fg:'#7A5230', icon:'🏛️' },
+  'Colonial':     { bg:'rgba(120,70,180,.15)',  fg:'#6A35B0', icon:'👑' },
+  '2 Niveles':    { bg:'rgba(30,120,60,.15)',   fg:'#1A6B35', icon:'🏢' },
+};
+
+function catSrc(carpeta, foto){
+  return 'assets/casas/' + carpeta + '/' + foto.replace(/ /g,'%20').replace(/\(/g,'%28').replace(/\)/g,'%29');
+}
+
+function buildCard(m) {
+  const ec     = ESTILO_CLR[m.estilo] || ESTILO_CLR['Moderno'];
+  const fotos  = getFotos(m.carpeta);
+  const precio = PRECIOS[m.id] || null;
+  const tieneF = fotos.length > 0;
+  const waMsg  = encodeURIComponent('Hola! Me interesa la ' + m.nombre + (precio ? ' (Desde $' + precio.desde + ')' : '') + '. ¿Pueden darme más información?');
+  const thumbHTML = tieneF
+    ? `<img src="${catSrc(m.carpeta, fotos[0])}" alt="${m.nombre}" loading="lazy">`
+    : `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:210px;background:linear-gradient(135deg,#f4faf9,#e9f5f3);gap:10px;"><i class="fas fa-drafting-compass" style="font-size:2rem;opacity:.3;color:var(--teal-d);"></i><span style="font-size:.75rem;color:var(--tb);font-style:italic;">Fotos próximamente</span></div>`;
+  const precioHTML = precio
+    ? `<div class="cat-price"><span class="cat-price-label">Desde</span><span class="cat-price-val">$${precio.desde}</span></div>`
+    : `<div class="cat-price-pending"><i class="fas fa-tag"></i> Precio a consultar</div>`;
+  const ctaHTML = tieneF
+    ? `<div class="cat-cta"><button class="cat-btn-ver">Ver fotos →</button><a class="cat-btn-wa2" href="https://wa.me/56931846889?text=${waMsg}" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i></a></div>`
+    : `<div class="cat-cta"><a class="cat-btn-wa3" href="https://wa.me/56931846889?text=${waMsg}" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-whatsapp"></i> Consultar</a></div>`;
+  const div = document.createElement('div');
+  div.className = 'cat-card reveal';
+  div.dataset.estilo = m.estilo;
+  div.dataset.metros = m.metros;
+  div.dataset.nombre = m.nombre.toLowerCase();
+  div.innerHTML = `
+    <div class="cat-thumb">
+      ${thumbHTML}
+      <span class="cat-style-pill" style="background:${ec.bg};color:${ec.fg};">${ec.icon} ${m.estilo}</span>
+      ${fotos.length > 1 ? `<span class="cat-count"><i class="fas fa-images"></i> ${fotos.length}</span>` : ''}
+      ${m.nuevo ? '<span class="cat-badge-new">Nuevo</span>' : ''}
+    </div>
+    <div class="cat-body">
+      <h3 class="cat-name">${m.nombre}</h3>
+      <div class="cat-sub"><i class="fas fa-ruler-combined"></i> ${m.metros} m²</div>
+      ${precioHTML}
+      ${ctaHTML}
+    </div>`;
+  if (tieneF) {
+    div.addEventListener('click', e => { if (!e.target.closest('a')) openCmod(m.id); });
+    div.querySelector('.cat-btn-ver').addEventListener('click', e => { e.stopPropagation(); openCmod(m.id); });
+  }
+  return div;
+}
+
+function renderCatalog() {
+  const grid     = document.getElementById('catGrid');
+  const miniGrid = document.getElementById('catMiniGrid');
+  const wrap     = document.getElementById('catExtraWrap');
+  const label    = document.getElementById('catExtraLabel');
+
+  // Limpiar por si se llama de nuevo (ej: después del fetch)
+  grid.innerHTML = '';
+  miniGrid.innerHTML = '';
+
+  const conFotos = MODELOS.filter(m => getFotos(m.carpeta).length > 0);
+  const sinFotos = MODELOS.filter(m => getFotos(m.carpeta).length === 0);
+
+  conFotos.forEach(m => { const c = buildCard(m); grid.appendChild(c); io.observe(c); });
+
+  if (sinFotos.length > 0) {
+    wrap.style.display = '';
+    label.textContent = 'Ver ' + sinFotos.length + ' modelos adicionales disponibles';
+    sinFotos.forEach(m => {
+      const ec     = ESTILO_CLR[m.estilo] || ESTILO_CLR['Moderno'];
+      const precio = PRECIOS[m.id] || null;
+      const waMsg  = encodeURIComponent('Hola! Me interesa la ' + m.nombre + (precio ? ' (Desde $' + precio.desde + ')' : '') + '. ¿Pueden darme más información?');
+      const preciosHTML = precio
+        ? `<div class="cat-mini-precios">
+             <div class="cat-mini-pr"><span>🔧 Kit Autoconstrucción</span><strong>$${precio.desde}</strong></div>
+             <div class="cat-mini-pr"><span>⚡ Kit con Instalaciones</span><strong>$${precio.instalaciones}</strong></div>
+             <div class="cat-mini-pr"><span>🏡 Llave en Mano</span><strong>$${precio.llaveEnMano}</strong></div>
+           </div>`
+        : `<p style="font-size:.76rem;color:var(--tb);font-style:italic;margin:0;"><i class="fas fa-tag"></i> Precio a consultar</p>`;
+      const div = document.createElement('div');
+      div.className = 'cat-mini'; div.dataset.estilo = m.estilo;
+      div.innerHTML = `
+        <div class="cat-mini-head">
+          <div class="cat-mini-badge" style="background:${ec.bg};">${ec.icon}</div>
+          <div class="cat-mini-name">${m.nombre}</div>
+        </div>
+        ${preciosHTML}
+        <div class="cat-mini-footer">
+          <a class="cat-mini-wa" href="https://wa.me/56931846889?text=${waMsg}" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+        </div>`;
+      miniGrid.appendChild(div);
+    });
+  }
+}
+
+/* ── Inicializar: fetch PHP → JSON; si falla usa FOTOS_DATA hardcodeado ── */
+fetch('api/fotos-data.php')
+  .then(r => { if (!r.ok) throw new Error('PHP no disponible'); return r.json(); })
+  .then(data => { if (data && typeof data === 'object') FOTOS_DATA = data; })
+  .catch(() => { /* Sin PHP: usar fallback hardcodeado */ })
+  .finally(() => renderCatalog());
+
+/* ── Buscador ── */
+document.getElementById('catSearch').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  document.querySelectorAll('.cat-card').forEach(c => {
+    const match = !q || c.dataset.nombre.includes(q) || c.dataset.metros.includes(q) || c.dataset.estilo.toLowerCase().includes(q);
+    c.classList.toggle('hidden', !match);
+  });
+});
+
+/* ── Filtros ── */
+function filterCat(f) {
+  document.querySelectorAll('.cat-filter').forEach(x => x.classList.toggle('active', x.dataset.filter === f));
+  document.querySelectorAll('.cat-card').forEach(c => c.classList.toggle('hidden', f !== 'all' && c.dataset.estilo !== f));
+  let miniVisible = 0;
+  document.querySelectorAll('.cat-mini').forEach(c => {
+    const hide = f !== 'all' && c.dataset.estilo !== f;
+    c.style.display = hide ? 'none' : '';
+    if (!hide) miniVisible++;
+  });
+  const wrap = document.getElementById('catExtraWrap');
+  if (wrap) wrap.style.display = miniVisible === 0 ? 'none' : '';
+}
+document.querySelectorAll('.cat-filter').forEach(b => b.addEventListener('click', () => filterCat(b.dataset.filter)));
+
+/* ── Toggle extra ── */
+function toggleExtra() {
+  document.getElementById('catExtraToggle').classList.toggle('open');
+  document.getElementById('catMiniGrid').classList.toggle('open');
+}
+
+/* ── Modal ── */
+let cmodSw = null;
+function openCmod(id) {
+  const m = MODELOS.find(x => x.id === id); if (!m) return;
+  const fotos = getFotos(m.carpeta); if (!fotos.length) return;
+  const ec = ESTILO_CLR[m.estilo] || ESTILO_CLR['Moderno'];
+  document.getElementById('cmodSlides').innerHTML = fotos.map(f => `<div class="swiper-slide"><img src="${catSrc(m.carpeta,f)}" alt="${m.nombre}"></div>`).join('');
+  const precio = PRECIOS[m.id] || null;
+  document.getElementById('cmodTitle').textContent = m.nombre;
+  document.getElementById('cmodMeta').innerHTML = `<span style="color:${ec.fg}">${ec.icon} ${m.estilo}</span> &nbsp;·&nbsp; <span style="color:var(--teal-d)"><i class="fas fa-images"></i> ${fotos.length} foto${fotos.length!==1?'s':''}</span>`;
+  document.getElementById('cmodPrices').innerHTML = precio
+    ? `<div class="cmod-price-table">
+         <div class="cmod-pt-row"><span class="cmod-pt-label">🔧 Kit<br>Autoconstrucción</span><span class="cmod-pt-val">$${precio.desde}</span></div>
+         <div class="cmod-pt-row"><span class="cmod-pt-label">⚡ Kit con<br>Instalaciones</span><span class="cmod-pt-val">$${precio.instalaciones}</span></div>
+         <div class="cmod-pt-row cmod-pt-highlight"><span class="cmod-pt-label">🏡 Llave<br>en Mano</span><span class="cmod-pt-val">$${precio.llaveEnMano}</span></div>
+       </div>`
+    : `<p style="color:var(--tb);font-style:italic;font-size:.82rem;margin:0;"><i class="fas fa-tag"></i> Precio a consultar</p>`;
+  const waMsg = 'Hola! Me interesa la ' + m.nombre + (precio ? ' (Desde $' + precio.desde + ')' : '') + '. ¿Pueden darme más información?';
+  document.getElementById('cmodWa').href = `https://wa.me/56931846889?text=${encodeURIComponent(waMsg)}`;
+  if (cmodSw) { cmodSw.destroy(true,true); cmodSw=null; }
+  cmodSw = new Swiper('#cmodSwiper', {
+    slidesPerView:1, loop:fotos.length>1,
+    pagination:{el:'#cmodSwiper .swiper-pagination',clickable:true},
+    navigation:{nextEl:'#cmodSwiper .swiper-button-next',prevEl:'#cmodSwiper .swiper-button-prev'},
+    keyboard:{enabled:true},
+  });
+  document.getElementById('cmodOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCmod() {
+  document.getElementById('cmodOverlay').classList.remove('open');
+  document.body.style.overflow='';
+  setTimeout(()=>{ if(cmodSw){cmodSw.destroy(true,true);cmodSw=null;} },300);
+}
+document.getElementById('cmodOverlay').addEventListener('click', e => { if(e.target===e.currentTarget) closeCmod(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeCmod(); });
+</script>
+
+<!-- ── Chat IA Alba ─────────────────────────────────────
+     groqKey: activa fallback browser-directo en desarrollo local (file://)
+     En producción el servidor PHP usa la clave de forma segura. -->
+<script>
+  window.AlbaChatConfig = {
+    groqKey: '' // solo para desarrollo local con file://, en producción usa PHP
+  };
+</script>
+<script src="assets/js/alba-chat.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+# Caché de respuestas IA (generado automáticamente)
+api/cache/
+
+# Configuración local con API keys (NO subir al repo)
+api/config.php
+
+# Videos (demasiado grandes para git, se suben directo al hosting)
+assets/videos/
+
+# Claude Code internals
+.claude/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Archivos de entorno local
+.env
+.env.local
