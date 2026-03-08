@@ -4,9 +4,9 @@ RewriteEngine On
 
 # Primero: redirigir mail al webmail
 RewriteCond %{HTTP_HOST} ^mail\.prefabricadaselalba\.cl$ [NC]
-RewriteRule ^(.*)$ https://prefabricadaselalba.cl:2096/ [R=301,L]
+RewriteRule ^ https://mail.prefabricadaselalba.cl%{REQUEST_URI} [L,R=301]
 
-# Después: si no existe archivo o carpeta, ir al home
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ / [R=302,L]
+# Segundo: forzar siempre www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP_HOST} !^mail\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

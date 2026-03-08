@@ -1,0 +1,38 @@
+# =============================================
+# robots.txt - Prefabricadas El Alba
+# Última actualización: marzo 2026
+# =============================================
+
+User-agent: *
+
+# === Bloqueos de seguridad y carpetas internas ===
+Disallow: /api/
+Disallow: /assets/detalles_tecnicos/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/upgrade/
+Disallow: /wp-content/backups/
+Disallow: /cgi-bin/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /backup/
+Disallow: /temp/
+Disallow: /logs/
+
+# Bloqueo de archivos que no deben indexarse
+Disallow: /*.pdf$
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.sql$
+Disallow: /*.tar.gz$
+
+# === Permitir recursos importantes para que rendericen bien ===
+Allow: /wp-content/uploads/
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+
+# === Sitemap (muy importante para Google y otros buscadores) ===
+Sitemap: https://prefabricadaselalba.cl/sitemap.xml
